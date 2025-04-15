@@ -1,1 +1,1 @@
-export const server = "http://localhost:8080/users";
+export const server = "https://myprofile-backend.onrender.com/users";
