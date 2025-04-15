@@ -1,8 +1,8 @@
-import { useRef, useState, useEffect } from "react";
+import { useEffect, useRef } from "react";
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
 import { FaCamera } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { setCapturedImg } from "../redux/reducers/user";
 
 const CaptureImage = () => {
@@ -36,6 +36,8 @@ const CaptureImage = () => {
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
     const ctx = canvas.getContext("2d");
+    ctx.translate(canvas.width, 0);
+    ctx.scale(-1, 1);
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
     const dataUrl = canvas.toDataURL("image/png");
     dispatch(setCapturedImg(dataUrl));
@@ -75,7 +77,12 @@ const CaptureImage = () => {
         <video
           ref={videoRef}
           autoPlay
-          style={{ width: "300px", margin: "1rem 0", borderRadius: "10px" }}
+          style={{
+            width: "300px",
+            margin: "1rem 0",
+            borderRadius: "10px",
+            transform: "scaleX(-1)",
+          }}
         />
         <button
           type="button"

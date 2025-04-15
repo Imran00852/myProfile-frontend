@@ -15,10 +15,13 @@ const MyDetails = () => {
   return (
     <div className="details-container">
       <div className="card">
-        <h1 style={{ marginBottom: "1.5rem", color: "#333" }}>Your Profile</h1>
-        <img src={user.capturedImg} alt="User" className="user-img" />
-        <h2>{user.fullName}</h2>
-        <p>{user.email}</p>
+        <h1>Your Submission was Successful 🎉</h1>
+        <p>
+          <strong>{user.ticketId}</strong>
+          <br />
+          Please provide this number to our agent on email so that they can
+          assist you further.
+        </p>
       </div>
     </div>
   );

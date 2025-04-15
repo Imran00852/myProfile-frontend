@@ -46,7 +46,7 @@ const Preview = () => {
       console.log(data);
       navigate("/myDetails");
     } catch (err) {
-      toast.error(data.response.err.message, {
+      toast.error(err.response?.data?.msg, {
         id: toastId,
       });
     } finally {

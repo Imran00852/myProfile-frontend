@@ -152,37 +152,41 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(to right, #171717, #222323);
+  padding: 1rem;
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: #ffffffcc;
   padding: 2rem;
-  border-radius: 16px;
+  border-radius: 20px;
   text-align: center;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  backdrop-filter: blur(10px);
+  border: 1px solid #e0e0e0;
 }
 
-.user-img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
+.card h1 {
+  font-size: 2rem;
+  color: #2c3e50;
   margin-bottom: 1.5rem;
-  border: 5px solid #333;
-}
-
-.card h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #222;
 }
 
 .card p {
   font-size: 1.1rem;
   color: #555;
+  line-height: 1.6;
+}
+
+.card strong {
+  font-weight: bold;
+  font-size: 1.5rem; /* Larger size for emphasis */
+  color: #ffffff;
+  background-color: #ff5722; /* Bright orange background */
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  display: inline-block;
 }
