@@ -7,7 +7,7 @@ const MyDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`${server}/my`, { withCredentials: true })
+      .get(`${server}/users/my`, { withCredentials: true })
       .then(({ data }) => setUser(data.user))
       .catch((err) => console.log(err));
   }, []);

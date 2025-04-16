@@ -182,11 +182,155 @@ a {
 
 .card strong {
   font-weight: bold;
-  font-size: 1.5rem; /* Larger size for emphasis */
+  font-size: 1.5rem;
   color: #ffffff;
-  background-color: #ff5722; /* Bright orange background */
+  background-color: #ff5722;
   padding: 10px 20px;
   border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: inline-block;
+}
+
+/* Admin container */
+.admin-container {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Search Bar Styling */
+.search-bar {
+  padding: 0.75rem 1.2rem;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  border: none;
+  color: #000;
+  margin: 1.5rem auto;
+  display: block;
+  font-size: 1rem;
+  box-shadow: 0 0 0 2px #2c2c2c;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #1a1a1b;
+}
+
+/* List of names */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+ul li {
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  font-size: 2rem;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+ul li:hover {
+  background-color: #f2f2f2;
+}
+
+/* No Users Text */
+.no-users {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 1rem;
+  color: red;
+}
+
+/* Image inside card */
+.user-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #00bcd4;
+}
+
+/* Text inside card */
+.user-card h3 {
+  margin: 0.5rem 0 0.3rem;
+  font-size: 1.2rem;
+}
+
+.user-card p {
+  color: #333;
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
+/* Modal card */
+.modal {
+  position: relative;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Blur background */
+.blurred {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+/* User list */
+.user-list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-list li {
+  cursor: pointer;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.1rem;
+  transition: background-color 0.2s ease;
+}
+
+.user-list li:hover {
+  background-color: #f2f2f2;
+}
+
+.no-users {
+  font-size: 1.2rem;
+  color: red;
+  text-align: center;
+  margin-top: 1rem;
 }

@@ -27,7 +27,7 @@ const Preview = () => {
     try {
       setLoading(true);
       const { data } = await axios.post(
-        `${server}/register`,
+        `${server}/users/register`,
         {
           fullName,
           email,
